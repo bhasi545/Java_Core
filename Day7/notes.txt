@@ -1,0 +1,86 @@
+try
+throw
+throws
+catch
+finally
+
+All user defined exceptions are checked exceptions 
+
+User defined exception class will not have any business logic
+Error message is assigened through constructor or with a final attribute
+setter is not required 
+getter is very much essential
+
+try,catch should be in main method 
+throw,throws should be inside class 
+
+finally block is fired at last ( both the cases , if u have exception or if u dont have exception )
+finally block will not have any parameters 
+multiple finally blocks not permitted 
+
+    
+     try{
+         aaaa
+         try{
+             bbbbb
+             ccccc<--- if exception is raised 
+         }
+         catch(..){
+            ....
+         }
+         dddd<-- reachable code 
+     }
+     catch(.......){
+        eeee
+     } 
+
+
+    try{
+        aaa
+        bbbb
+        ccccc<-- if exception is raised 
+        dddddd<-- this becomes unreachable
+     }
+     catch(...){
+       ....
+     }
+     
+approach - 1
+
+class CarNotFoundFoundException extend Exception{
+  private String errorMessage;
+  // construtor
+  // getter 
+}
+
+
+
+approach - 2
+
+class CarNotFoundFoundException extend Exception{
+  final String errorMessage="Car is Not Available ";
+  
+  // getter 
+} 
+
+class CarAlreadyExsistException extend Exception{
+  private String errorMessage;
+  // construtor
+  // getter 
+}
+
+
+interface ICarServiceProvider{
+      String createCar(Car) throws CarAlreadyExsistException;
+      Car readACar(carNumber) throws CarNotFoundFoundException;
+      Car[] readAllCars( );
+      String updateCar(carNumber,carCost) throws CarNotFoundFoundException;
+      boolean deleteACar(carNumber) throws CarNotFoundFoundException;
+
+}
+      
+         
+
+
+
+

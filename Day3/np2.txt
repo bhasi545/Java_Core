@@ -1,0 +1,73 @@
+What are the possible ways of reading the inputs?
+
+1) command line arguements 
+2) file
+3) DB
+4) XML
+5) Screen
+6) Hard Code
+7) TextBox
+8) MobileApp
+9) WebApplication 
+10) JSON
+11) another service 
+12) Voice inputs 
+
+
+What are the possible way to project the output ?
+
+UI/XML/JSON/DB/File/Mobile App,web app ........
+
+
+
+1) Class name should be prefarably NOUN ,singular( product , employee....) 
+2) Do not have input phase ( read statement ) inside the class ( should be in main method ) 
+3) Do not have output phase ( write statement ) inside the class ( should be in main method ) 
+4) class must have validation phase , Business logic 
+
+
+Entity classes
+
+1) private attributes 
+2) public constructors
+3) public setters and getters 
+4) toString()
+5) hashCode()
+6) equals()
+7) implements serializable 
+..
+..
+....
+
+
+Construtors 
+
+Class name and construtor name are same
+nature is usually public
+it can be overloded 
+it is meant for input phase 
+it gets fired ( called )  automatically when an object is created 
+constructor is fired only once
+constructor will not have return type
+
+
+Why do we need setters if we have constructors ?
+
+Both constructors , setters are meant for input phase 
+
+Id,name,Price 
+
+for intializing first time we can use constructor 
+
+If I need to update the inputs use setters 
+
+
+
+
+
+
+
+
+
+
+

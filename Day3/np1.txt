@@ -1,0 +1,47 @@
+1) Methods in java
+2) overloading the methods ( compile time poly morphism ) 
+3) call by value and call by reference 
+4) Class , attributes and methods 
+
+
+
+Todays Agenda
+
+1) Basic OOPS Concepts
+    Encapsulation ( packing relevant things together ) 
+    Abstraction  ( high level understanding ... ) 
+    Polymorphism ( making many forms  , run time poly morphism )  
+    Inheritance ( properties of your parents are inherited to you ) 
+
+2) Naming a class
+
+
+    excellent - not possible 
+    lazy      - not possible 
+    employee  - possible
+    walking   - not possible 
+    salary    - depends on the requirement 
+    tierd     - not possible 
+    sleep     - not possible 
+    product   - possible 
+    age       - not possible 
+
+Table names and class names will be mostly same.
+
+Table    - class
+columns  - attributes  
+
+
+    
+
+3) Prepaing an entity class ( 75% ) 
+
+4) Do's and Dont's in class
+
+5) Constructors ( if time permits ) 
+
+
+public void setter ( parameter )
+
+public returntype getter() <-- no parameter 
+

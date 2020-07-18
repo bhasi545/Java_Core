@@ -1,0 +1,65 @@
+Todays Agenda
+
+1) Entity class completed with object methods 
+2) Inhertiance ( resusablity ) 
+3) Is-A Relation ship 
+4) Run time polymorphism 
+5) Final Keyword 
+
+Any class written in Java will have Object ( available class ) as super class 
+
+Object is printed 
+com.htc.day3.Book@15db9742
+packagename.classname@memoryaddress
+
+
+How do I print details of the object ? using toString() - available in Object 
+
+
+@Override
+public String toString() {
+	return "Book [bookId....=" + bookId + ", bookName----=" + bookName + ", bookPrice=" + bookPrice + "]";
+}
+
+The above method is called automatically , when i try to print the detail of the object 
+
+
+1) hashCode and equals method are interrelated with each other 
+2) hashCode is meant for refering the memory where the object is stored 
+3) equals method is meant for comparing two objects 
+4) equals method will return true if hashcode of 2 objects are same.
+5) every object will have unique hashcode 
+
+
+equals method is widely used if u need to sort ( compare and swap ) and conclude 
+
+
+employee as child class , what could be the better parent class for this ?
+
+
+
+department,company,organization,person,manager,HR,PayRoll,Team,facilities,BusinessUnit
+
+<childclassname> Is-A <parentclassname>
+
+employee Is-A department ( wrong ) 
+
+employee Is-A Person 
+
+Is-a Relation ship is inheritance 
+
+
+Final variable   -- cannot be changed 
+Final Method     -- cannot be overridden 
+Final class      -- cannot be inherited 
+
+
+
+
+
+
+
+
+
+
+

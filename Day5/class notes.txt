@@ -1,0 +1,241 @@
+Todays Agenda
+
+1) Abstract classes 
+2) Abstract and concrete methods 
+3) Interfaces 
+4) Difference between Interfaces and Abstract classes 
+5) Static and non-static methods 
+6) Static and default block 
+
+
+Authentication tells who you are ? Authorization tells what are you going to do ?
+
+
+Possible way for authentication are 
+
+User iD password
+Voice message 
+fingerprint
+Retina scan
+Mobile Pin
+OTP
+Face recog...
+
+
+Abstract classes will have atleast one abstract method
+Abstract classes can also have concrete methods ( non abstrcat methods ) 
+Abstract classes cannot be instantiated 
+
+If the logics are going to vary with respect to sub classes , then keep the method as abstarct in parent class
+
+If the Logics are NOT going to vary with respect to sub classes , then keep the method as concrete ( non abstract method ) 
+
+
+// This is not possbile 
+class AxisBankServiceProvider extends BankingServiceProvider extends SpecialBankingServideProvider{
+
+Multiple inheritance not permited in this way .
+
+
+interface IBankServiceProvider {
+  A-authenticateUser();
+  B-transferMoney();
+  C-manageLoan();
+  D-rechargeMobile();
+  E-bookTickets();
+  F-payBills();
+}
+
+AxisBankServiceProvider - A,B,D
+
+IndianBankServiceProvider-A,E
+
+CUBBankSericeProvider - all
+
+HDFCBankServiceProvider-A,C,E,F
+
+
+
+
+class AxisBankServiceProvider extends IBankServiceProvider{
+
+}
+
+We need to override all methods even though i need just 3
+
+u must implement all methods even though not used
+
+even though only A B and D are needed
+
+
+instead of having 6 abstract methods in one interface , we need to have 6 interfaces with each one abstarct method
+
+interface IauthenticateUserServiceProvider{
+  public void authenticateUser();
+     
+}
+
+interface ItransferMoneyServiceProvider{
+   public void transferMoney();
+      
+}
+
+interface IrechargeMobileServiceProvider{
+   public void rechargeMobile();
+      
+}
+
+
+class GreenBank impements IauthenticateUserServiceProvider{
+   public void authenticateUser(){
+     sysout ( "Logics ');
+   }
+}
+
+class USABank implements IauthenticateUserServiceProvider implements  IrechargeMobileServiceProvider{
+   public void authenticateUser(){
+     sysout ( "Logics ');
+   }
+  public void rechargeMobile(){
+     sysout("Logics");
+  }
+}
+
+
+class subclass implement A,implement B,extends C
+
+
+Conclusion :
+   Do not pressurize Abstract classes or interfaces with more methods
+   An Interface must have minimum 1 method and maximum 1 method ?
+
+
+
+Let us have 15 minutes break 
+
+
+static and non static methods 
+
+class NumberserviceProvider{
+  private int y;
+ //setters and getters for y
+  static void add(int a,int b){
+    print (a+b);
+  }
+  void sum(int x){
+    print (x+y);
+  }
+}
+
+
+If the business logic of a method depends on parameters only , we can designate the method as Static 
+
+If the business logic of a method depends on attribute also , we can designate the method as non static
+
+
+class Car{
+   int static numberofwheels=4;
+   String color;
+   int cost;
+}
+
+Car - 3 objects ( maruti , ford , honda ) 
+
+In an interface , By default all the methods are abstract 
+In an interface , By default all the variables public ,static and final
+
+a) all static variables can be final - wrong 
+b) all final variables can be static - correct 
+
+Static block fired 
+Overloded consdtructor is fired - javaprogrammingbook
+Overloded consdtructor is fired - dbmsbook
+Default constructor is fired - sqlbook
+
+static block fired before constructor 
+
+even if u have n number of objects , only once it is fired 
+
+one time activity opeing log files , authenticating the end user .... will happen in static block
+
+class Trainee{
+    traineeid,name,gender,emailid...
+  ....
+  ...
+}
+
+
+class Batch{
+  straing batchCode
+  date startddate
+  date enddate
+  Trainee trainee[]
+....
+......
+...
+}
+ 
+
+class interfacename{
+  int pie=3.14;
+} 
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
