@@ -1,0 +1,7 @@
+100 , Pen , 560
+101 , Ball , 60
+102 , Eraser , 40
+103 , Scale , 110
+104 , Board  , 1000
+105 , Drive , 600
+106 , Glue  , 50
