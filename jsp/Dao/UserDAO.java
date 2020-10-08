@@ -1,0 +1,12 @@
+package com.Servlet.Classes;
+
+import java.sql.SQLException;
+import java.util.List;
+
+
+public interface UserDAO {
+
+	public boolean registerUser(String username, String password, String email, String mobileno) throws SQLException;
+	public UserDTO searchUser(String username) throws SQLException;
+	public List<UserDTO> getAllUsers() throws SQLException;
+}
